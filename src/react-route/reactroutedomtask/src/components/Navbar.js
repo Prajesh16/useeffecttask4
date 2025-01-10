@@ -5,7 +5,7 @@ import "./Navbar.css";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav>
+    <nav className="navbar">
       <Link className="title" to="/">
         Home
       </Link>
@@ -19,12 +19,16 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-      <ul className={menuOpen ? "open" : ""}>
-        <li>
-          <NavLink to="/about">About</NavLink>
+      <ul className={"navlist" + (menuOpen ? "open" : "")}>
+        <li className="navlinks">
+          <NavLink className="link" to="/about">
+            About
+          </NavLink>
         </li>
-        <li>
-          <NavLink to="/contact">Contact</NavLink>
+        <li className="navlinks">
+          <NavLink className="link" to="/contact">
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>

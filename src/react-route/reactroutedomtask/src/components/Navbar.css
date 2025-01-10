@@ -2,7 +2,7 @@
     background-color: #1d4ed8;
 }
 
-nav{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,20 +10,20 @@ nav{
     position: sticky;
     top: 0;
 }
-nav .title{
+.title{
     font-size: 1.5rem;
     font-weight: bold;
     margin: 1rem;
     text-decoration: none;
     color: white;
 }
-nav ul{
+.navlist{
     display: flex;
 }
-nav ul li{
+.navlinks {
     list-style: none;
 }
-nav ul li a{
+.link {
     display: block;
     color: white;
     text-decoration: none;
@@ -32,11 +32,11 @@ nav ul li a{
     border-radius: 0.5rem;
 }
 
-nav ul li a:not(.active):hover{
+.link:not(.active):hover {
     background-color: #172554;
 }
 
-nav .menu{
+.menu{
     display: none;
     position: absolute;
     top: 0.75rem;
@@ -47,7 +47,7 @@ nav .menu{
     height: 2rem;
 }
 
-nav .menu span{
+.menu span { 
     height: 0.4rem;
     width: 100%;
     background-color: white;
@@ -55,28 +55,28 @@ nav .menu span{
 }
 
 @media (max-width:480px) {
-    nav .menu{
+    .menu{
         display: flex;
     }
-    nav{
+    .navbar{
         flex-direction: column;
         align-items: start;
     }
-    nav ul {
+    .navlist {
         display: none; 
         flex-direction: column;
         width: 100%;
         margin-bottom: 0.25rem;
     }
-    nav ul.open{
+    .navlist.open{
         display: flex;
     }
 
-    nav ul li{
+    .navlinks {
         width: 100%;
         text-align: center;
     }
-    nav ul li a {
+    .link {
         margin: 0.2rem 0.5rem ;
     }
 }
